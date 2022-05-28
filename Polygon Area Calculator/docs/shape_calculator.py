@@ -34,7 +34,6 @@ class Rectangle:
     max_height = self.height // shape.height
     return max_width * max_height
 
-
 class Square(Rectangle):
 
   def __init__(self, length):
