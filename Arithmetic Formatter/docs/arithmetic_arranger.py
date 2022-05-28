@@ -56,6 +56,7 @@ def arithmetic_arranger(problems, answer=False):
             else:
                 ans = str(int(first_operand[i]) - int(second_operand[i]))
                 
+                
 
             if len(ans) > max(len(first_operand[i]), len(second_operand[i])):
                 fourth_line.append(" " + ans)
