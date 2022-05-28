@@ -4,7 +4,6 @@ class Category:
     self.category = category
     self.ledger = []
 
-
   def __str__(self):
     s = self.category.center(30, "*") + "\n"
 
@@ -21,7 +20,6 @@ class Category:
     temp['description'] = description
     self.ledger.append(temp)
 
-
   def withdraw(self, amount, description=""):
     if self.check_funds(amount):
       temp = {}
@@ -31,27 +29,23 @@ class Category:
       return True
     return False
 
-
   def get_balance(self):
     balance = 0
     for item in self.ledger:
       balance += item['amount']
     return balance
-
-
+  
   def transfer(self, amount, budget_cat):
     if self.check_funds(amount):
       self.withdraw(amount, "Transfer to " + budget_cat.category)
       budget_cat.deposit(amount, "Transfer from " + self.category)
       return True
     return False
-
-
+  
   def check_funds(self, amount):
     if amount > self.get_balance():
       return False
     return True
-
 
 def create_spend_chart(categories):
   spend = []
