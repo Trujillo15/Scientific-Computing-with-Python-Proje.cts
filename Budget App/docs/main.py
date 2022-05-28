@@ -1,4 +1,3 @@
-# This entrypoint file to be used in development
 import budget
 
 from budget import create_spend_chart
