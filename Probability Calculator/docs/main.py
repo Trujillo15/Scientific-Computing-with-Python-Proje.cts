@@ -1,4 +1,5 @@
-# This entrypoint file to be used in development. Start by reading README.md
+# This entrypoint file to be used in development
+
 import prob_calculator
 from unittest import main
 
@@ -9,6 +10,7 @@ probability = prob_calculator.experiment(
                     "red": 1},
     num_balls_drawn=4,
     num_experiments=3000)
+
 print("Probability:", probability)
 
 # Run unit tests automatically
