@@ -1,9 +1,11 @@
 import unittest
+
 import budget
+
 from budget import create_spend_chart
 
-
 class UnitTests(unittest.TestCase):
+    
     def setUp(self):
         self.food = budget.Category("Food")
         self.entertainment = budget.Category("Entertainment")
