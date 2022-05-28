@@ -1,5 +1,3 @@
-# This entrypoint file to be used in development
-
 import prob_calculator
 from unittest import main
 
