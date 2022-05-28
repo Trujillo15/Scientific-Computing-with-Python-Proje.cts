@@ -1,18 +1,23 @@
 def add_time(start, duration, starting_day=""):
+    
     # Separte the start into hours and minutes
+    
     pieces = start.split()
     time = pieces[0].split(":")
     end = pieces[1]
 
     # Calculate 24-hour clock format
+    
     if end == "PM" :
         hour = int(time[0]) + 12
         time[0] = str(hour)
     
     # Separate the duration into hours and minutes
+    
     dur_time = duration.split(":")
 
     # Add hours and minutes
+    
     new_hour = int(time[0]) + int(dur_time[0])
     new_minutes = int(time[1]) + int(dur_time[1])
 
@@ -28,6 +33,7 @@ def add_time(start, duration, starting_day=""):
     
     # Find AM and PM
     # Return to 12-hour clock format
+    
     if new_hour > 0 and new_hour < 12 :
         end = "AM"
     elif new_hour == 12 :
