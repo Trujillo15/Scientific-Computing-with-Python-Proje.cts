@@ -1,5 +1,3 @@
-# This entrypoint file to be used in development
-
 from arithmetic_arranger import arithmetic_arranger
 from unittest import main
 
