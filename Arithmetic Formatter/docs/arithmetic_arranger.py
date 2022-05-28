@@ -2,7 +2,6 @@ def arithmetic_arranger(problems, answer=False):
     # Check the number of problems
     if len(problems) > 5:
         return "Error: Too many problems."
-    
     first_operand = []
     second_operand = []
     operator = []
@@ -26,23 +25,26 @@ def arithmetic_arranger(problems, answer=False):
     for i in range(len(first_operand)):
         if len(first_operand[i]) > 4 or len(second_operand[i]) > 4:
             return "Error: Numbers cannot be more than four digits."
-
     first_line = []
     second_line = []
     third_line = []
     fourth_line = []
+    
 
     for i in range(len(first_operand)):
         if len(first_operand[i]) > len(second_operand[i]):
             first_line.append(" "*2 + first_operand[i])
         else:
             first_line.append(" "*(len(second_operand[i]) - len(first_operand[i]) + 2) + first_operand[i])
+            
+            
 
     for i in range(len(second_operand)):
         if len(second_operand[i]) > len(first_operand[i]):
             second_line.append(operator[i] + " " + second_operand[i])
         else:
             second_line.append(operator[i] + " "*(len(first_operand[i]) - len(second_operand[i]) + 1) + second_operand[i])
+            
 
     for i in range(len(first_operand)):
         third_line.append("-"*(max(len(first_operand[i]), len(second_operand[i])) + 2))
@@ -53,6 +55,7 @@ def arithmetic_arranger(problems, answer=False):
                 ans = str(int(first_operand[i]) + int(second_operand[i]))
             else:
                 ans = str(int(first_operand[i]) - int(second_operand[i]))
+                
 
             if len(ans) > max(len(first_operand[i]), len(second_operand[i])):
                 fourth_line.append(" " + ans)
